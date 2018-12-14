@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Six+Caps');
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700');
+
+$ff-title: 'Six Caps', sans-serif;
+$ff-subtitle: 'Montserrat', sans-serif; 
+
+$ff-body: 'roboto', sans-serif;
+
+$fw-normal: 400; 
+$fw-medium: 500;
+$fw-bold: 700;
+
+$fs-italic: italic;
+
+@mixin sans-serif($fs, $color: $clr-primary, $tt: uppercase, $lh:1, $ls: .1em){
+    font-family: $ff-title;
+    font-size: $fs;
+    color: $color;
+    text-transform: $tt;
+    line-height: $lh;
+    letter-spacing: $ls;
+}

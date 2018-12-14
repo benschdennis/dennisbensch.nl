@@ -1,0 +1,98 @@
+.section--portfolio{
+    padding: 5em 0;
+    background: $clr-gray-light;
+}
+
+.grid-portfolio{
+    display: flex;
+    flex-wrap: wrap;
+    @include container($max-width: 60em);
+}
+
+.grid-portfolio__item{
+    position: relative;
+    overflow: hidden;
+    flex: 1 1 20rem;
+    display: flex;
+
+    .grid-portfolio__image{
+        display: block;
+        width: 100%;
+    }
+    
+    figcaption{
+        position: absolute;
+        top: 100%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 1em;
+        background: rgba($clr-accent, .75);
+        color: $clr-white;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        transition: top ease-in-out 400ms;
+    }
+
+    &:hover figcaption,
+    &:focus figcaption{
+        top: 0;
+    }
+}
+
+.grid-portfolio__title{
+    color: $clr-white;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: auto;
+}
+
+.grid-portfolio__description{
+    display: none;
+}
+
+
+.grid-portfolio__link{
+    color: $clr-white;
+    font-weight: $fw-bold;
+    font-size: 1.1em;
+    text-decoration: none;
+    border-bottom: 2px solid $clr-white;
+    align-self: flex-start;
+
+    &::after{
+        content: url(../assets/images/arrow.svg);
+        display: inline-block;
+        margin-left: 0.6em;
+        height: .9em;
+        width: .9em;
+    }
+}
+
+@supports (display: grid){
+    .grid-portfolio{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .grid-portfolio__item.featured{
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2;
+    }
+
+    .portfolio__item.featured {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2;
+      }
+
+    .featured{
+        .grid-portfolio__title{
+            font-size: 3rem;
+        }
+
+        .grid-portfolio__description{
+            display: block;
+        }
+    }
+}

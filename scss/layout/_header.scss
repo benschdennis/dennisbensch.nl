@@ -1,0 +1,47 @@
+.logo{
+    width: 250px;
+    margin: 0 auto 2em;
+    display: block;
+}
+
+.section--header{
+    background: {
+        color: $clr-primary;
+        size: cover;
+        repeat: no-repeat;
+    }
+    display: grid;
+    grid: auto-flow / minmax(1em, 1fr) minmax(400px, 900px) minmax(1em, 1fr);
+    padding: 10vh 0;
+
+    .logo,
+    .header__title{
+        grid-column: 2 / 3;
+    }
+
+    h1.header__title{
+        @include sans-serif($fs: 3rem, $color: white, $tt: initial);
+        margin-bottom: 1em;
+        
+        span{
+            @include sans-serif($fs: 5.5rem, $color: $clr-gray-dark, $lh: 1.2);
+        }
+    }
+
+    .header__text{
+        grid-column: 2 / 3;
+        position: relative;
+
+        &::after{
+            content: '';
+            display: block;
+            height: 2px;
+            background: $clr-white;
+            opacity: 0.3;
+
+            width: 109px;
+            position: absolute;
+            top: -1.1em;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+body{
+    font-family: $ff-body;
+    // font-size: .875rem;
+    font-size: 1.325rem;
+    line-height: 1.5em;
+    color: $clr-dark;
+    font-weight: $fw-normal;
+}
+
+h1, h2, h3, p {
+    margin-bottom: 1em;
+    margin-top: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1{
+    @include sans-serif($fs: 3.125rem);
+
+    @include mq {
+        font-size: 4.25rem;
+      }
+    
+    span{
+        display: block;
+    }
+}
+
+h2{
+    @include sans-serif($fs: 2rem);
+    
+    @include mq {
+        font-size: 3rem;
+    }
+}
+
+h3{
+    @include sans-serif($fs: 1.8rem, $color: $clr-secondary, $tt: initial);
+}
