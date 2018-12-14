@@ -6,14 +6,14 @@
 .grid-portfolio{
     display: flex;
     flex-wrap: wrap;
-    @include container($max-width: 60em);
+    @include container($max-width: 50em);
 }
 
 .grid-portfolio__item{
     position: relative;
     overflow: hidden;
     flex: 1 1 20rem;
-    display: flex;
+    // display: flex;
 
     .grid-portfolio__image{
         display: block;
@@ -80,11 +80,6 @@
         grid-column: 1 / span 2;
         grid-row: 1 / span 2;
     }
-
-    .portfolio__item.featured {
-        grid-column: 1 / span 2;
-        grid-row: 1 / span 2;
-      }
 
     .featured{
         .grid-portfolio__title{
