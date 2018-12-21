@@ -1,0 +1,119 @@
+.section--cases{
+    padding: 5em 0;
+    background: $clr-gray-light;
+}
+
+.grid-cases{
+    display: flex;
+    flex-wrap: wrap;
+    // @include container($max-width: 50em);
+}
+
+.case__item{
+    position: relative;
+    overflow: hidden;
+    flex: 2 2 20rem;
+    display: flex;
+
+    .case__image{
+        display: block;
+        width: 100%;
+        max-height: 20em;
+        object-fit: cover;
+    }
+    
+    figcaption{
+        position: absolute;
+        top: 100%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 1em;
+        background: rgba($clr-accent, .75);
+        color: $clr-white;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        transition: top ease-in-out 400ms;
+    }
+
+    &:hover figcaption,
+    &:focus figcaption{
+        top: 0;
+    }
+}
+
+.case__title{
+    color: $clr-white;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: auto;
+}
+
+.case__description{
+    display: none;
+}
+
+
+.case__link{
+    color: $clr-white;
+    font-weight: $fw-bold;
+    font-size: 1.1em;
+    text-decoration: none;
+    border-bottom: 2px solid $clr-white;
+    align-self: flex-start;
+
+    &::after{
+        content: url(../assets/images/arrow.svg);
+        display: inline-block;
+        margin-left: 0.6em;
+        height: .9em;
+        width: .9em;
+    }
+}
+
+@supports (display: grid){
+    .grid-cases{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .case__item.featured{
+        grid-column: 1 / span 4;
+        grid-row: 1 / span 1;
+        margin-bottom: 1em;
+    }
+
+    .case__item{
+        grid-column: span 2;
+    }
+
+    .featured{
+        .case__title{
+            font-size: 3rem;
+        }
+
+        .case__description{
+            display: block;
+        }
+    }
+
+    // @media only screen and (max-width: 800px) {
+    //     .grid-cases{
+    //     display: grid;
+    //     grid-template-columns: repeat(1, 1fr);
+    //     }
+
+    //     .case__item.featured{
+    //         grid-column: 1 / span 1;
+    //         grid-row: 1 / span 1;
+    //         margin-bottom: 0em;
+    //     }
+
+    //     .featured{
+    //         .case__description{
+    //             display: none;
+    //         }
+    //     }
+    // }
+}
