@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<![if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]>
+<![if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]>
+<![if IE 8]>         <html class="no-js lt-ie9"> <![endif]>
+<![if gt IE 8]><!>   <html class="no-js"> <!<![endif]>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Portfolio Dennis Bensch</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="{{ "assets/css/main.css" | prepend: site.baseurl }}">
+</head>
+
+<body>
+   
+    <!-- Navigatie -->
+    <header>
+        <h5 class="logo" style="color: white;">Logo</h5>
+        
+        {% include navigatie.html %}
+        
+    </header>
+
+    <section class="section section--header">
+                     
+        <!-- Intro -->
+        <h1 class="header__title">{{ page.title }}</h1>
+        <p class="header__text">{{ page.description }}</p>
+
+    </section>
+
+    <section class="section section--content">
+        
+        {{ content }}
+    
+    </section>
+    
+</body>
+
+</html>

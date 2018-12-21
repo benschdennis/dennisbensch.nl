@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div class="grid-cases">
+
+        {{ content }}
+
+    {% for portfolio in site.portfolio %}
+    
+    <!-- Portfolio item 1  -->
+    <figure class="case__item">
+        <img class ="case__image" src="assets/images/portfolio-1.jpg">
+        <figcaption>
+            <h3 class="case__title">{{ portfolio.title }}</h3>
+            <p class="case__description">{{ portfolio.description }}</p>
+            <a href="{{ portfolio.url }}" class="case__link">Lees meer</a>
+        </figcaption>
+    </figure>
+
+    {% endfor %}
+
+
+</div> 
+

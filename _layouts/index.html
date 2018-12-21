@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dennis Bensch</title>
+    
+    <link rel="stylesheet" href="{{ "assets/css/main.css" | prepend: site.baseurl }}">
+
+</head>
+<body>
+    <!-- Navigatie -->
+    <header>
+        <h5 class="logo" style="color: white;">Logo</h5>
+        
+        {% include navigatie.html %}
+
+    </header> 
+
+    <section class="section section--header">
+        
+        <svg class="logo logo--white"></svg>              
+       
+        <h1 class="header__title"><span>Hi,</span> Welkom op mijn portfolio</h1>
+        <p class="header__text">Lorum ipsum</p>
+
+    </section>
+
+    <section class="section section--content">
+        
+        <img class="about__img" src="assets/images/port-dennis.png" alt="A random picture">
+        <h1 class="about__title">Dennis Portfolio</h1>
+        <h3 class="about__subtitle">Digital designer</h3>
+        <div class="about__text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis erat condimentum, ultrices purus et, sodales sem. Suspendisse venenatis nisl erat, at euismod enim efficitur non. Sed et quam vel tellus convallis tincidunt. Donec lorem ligula, aliquam ac tincidunt a, condimentum vel lorem. Integer fermentum viverra lobortis.</p>
+            <p>Nunc eget turpis augue. Donec ac tristique ipsum. Maecenas euismod eros in velit volutpat, tincidunt aliquet ante sollicitudin. Cras tincidunt viverra dictum. Suspendisse potenti. Nam risus arcu, sollicitudin vitae urna at, blandit pellentesque risus. Praesent dolor diam, maximus varius dapibus non, pharetra at orci. Nunc commodo non sapien elementum consequat.</p>
+        </div>
+    
+    </section>
+
+    <section class="section section__content">
+    
+        <div class="portfolio__items">
+            
+            <!-- Portfolio item 1  -->
+            <figure class="portfolio__item portfolio__item--left">
+                <figcaption>
+                    <h1 class="portfolio__title">Programmeer je eigen leven</h1>
+                    <a href="#" class="portfolio__link">Zie project</a>
+                </figcaption>
+                <img class ="portfolio__image" src="assets/images/portfolio-1.jpg">
+            </figure>
+
+            <!-- Portfolio item 2  -->
+            <figure class="portfolio__item portfolio__item--right">
+                <figcaption>
+                    <h1 class="portfolio__title">HackedCity</h1>
+                    <a href="#" class="portfolio__link">Zie project</a>
+                </figcaption>
+                <img class ="portfolio__image" src="assets/images/portfolio-1.jpg">
+            </figure>
+
+       </div>
+            
+    </section>
+</body>
+</html>

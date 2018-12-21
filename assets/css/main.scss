@@ -1,0 +1,20 @@
+---
+# Jekyll
+---
+// Reset all css settings
+@import 'vendor/reset';
+
+// Modules - variables
+@import 'modules/all';
+
+// Import Layout Elements
+@import 'layout/general';
+@import 'layout/navigation';
+
+    // Import secions on idex
+    @import 'layout/header';
+    @import 'layout/about';
+    @import 'layout/portfolio';
+
+    // Import pages
+    @import 'layout/cases';
