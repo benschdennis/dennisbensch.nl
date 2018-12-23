@@ -9,8 +9,6 @@ layout: default
 ---
 
 # Dit is een header
-
-Dit is een test gesprek
-
+Hier komt nog een verder uitleg te staan 
 
 
