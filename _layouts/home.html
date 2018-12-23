@@ -22,26 +22,25 @@
         
         <svg class="logo logo--white"></svg>              
        
-        <h1 class="header__title"><span>Hi,</span> Welkom op mijn portfolio</h1>
-        <p class="header__text">Lorum ipsum</p>
+        <h1 class="header__title"><span>{{ page.span }}</span> {{ page.title }}</h1>
+        <p class="header__text">{{ page.description }}</p>
 
     </section>
 
     <section class="section section--content">
         
-        <img class="about__img" src="assets/images/port-dennis.png" alt="A random picture">
-        <h1 class="about__title">Dennis Portfolio</h1>
-        <h3 class="about__subtitle">Digital designer</h3>
+        <img class="about__img" src="{{ page.about__img }}" alt="A random picture">
+        <h1 class="about__title">{{ page.about__title }}</h1>
+        <h3 class="about__subtitle">{{ page.about__subtitle }} </h3>
         <div class="about__text">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis erat condimentum, ultrices purus et, sodales sem. Suspendisse venenatis nisl erat, at euismod enim efficitur non. Sed et quam vel tellus convallis tincidunt. Donec lorem ligula, aliquam ac tincidunt a, condimentum vel lorem. Integer fermentum viverra lobortis.</p>
-            <p>Nunc eget turpis augue. Donec ac tristique ipsum. Maecenas euismod eros in velit volutpat, tincidunt aliquet ante sollicitudin. Cras tincidunt viverra dictum. Suspendisse potenti. Nam risus arcu, sollicitudin vitae urna at, blandit pellentesque risus. Praesent dolor diam, maximus varius dapibus non, pharetra at orci. Nunc commodo non sapien elementum consequat.</p>
+            <p>{{ page.about__text }}</p>
         </div>
     
     </section>
 
-    <section class="section section__content">
+    <section class="section section--column12">
     
-        <div class="portfolio__items">
+        <!-- <div class="portfolio__items"> -->
             
             <!-- Portfolio item 1  -->
             <figure class="portfolio__item portfolio__item--left">
@@ -61,7 +60,7 @@
                 <img class ="portfolio__image" src="assets/images/portfolio-1.jpg">
             </figure>
 
-       </div>
+       <!-- </div> -->
             
     </section>
 </body>

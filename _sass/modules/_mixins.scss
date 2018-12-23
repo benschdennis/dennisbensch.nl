@@ -1,4 +1,4 @@
-@mixin container($width: 90%, $max-width: 50em){
+@mixin container($width: 90%, $max-width: 70em){
     width: $width;
     margin: 0 auto;
     max-width: $max-width;
