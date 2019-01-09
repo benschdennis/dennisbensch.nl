@@ -123,3 +123,61 @@
     //     }
     // }
 }
+
+// -------------------------------------------------------------------
+// BESCHRIJVING VAN PORTFOLIO VERVOLG PAGINA 
+// -------------------------------------------------------------------
+
+.section--portfolio-item{
+    width: 100%;
+    height: 90vh;
+    // padding: 5vh 0;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    // grid: auto-flow / minmax(1em, 1fr) minmax(400px, 900px) minmax(1em, 1fr);
+    // grid-gap: 1em;
+    
+    background: {
+        size: cover;
+        repeat: no-repeat;
+        position: center center;
+    }
+
+    .portfolio__title{
+        grid-column: 1 / 7 span;
+    }
+
+    .portfolio__intro--white{
+        background: white;
+        position: absolute;
+        bottom: 40%;
+        padding: 1em;
+    }
+
+    h1.portfolio__title{
+        @include sans-serif($fs: 5rem, $color: $clr-secondary, $tt: initial);
+        display: block;
+        text-align: left;
+        margin-bottom: 0.2em;
+
+    }
+
+    .portfolio__text{
+        grid-column: 1 / 7;
+        color: $clr-secondary;
+
+
+        // &::after{
+        //     content: '';
+        //     display: block;
+        //     height: 2px;
+        //     background: $clr-white;
+        //     opacity: 0.3;
+
+        //     width: 100%;
+        //     position: absolute;
+        //     top: -1.1em;
+        // }
+    }
+}

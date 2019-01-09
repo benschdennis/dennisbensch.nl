@@ -4,7 +4,7 @@
         repeat: no-repeat;
         
         color: $clr-primary;
-        image: linear-gradient($clr-primary, $clr-secondary), url('https://source.unsplash.com/random');
+        image: linear-gradient($clr-primary, $clr-secondary), url('/assets/images/header.jpg'); 
         blend-mode: multiply;
     }
    
@@ -26,7 +26,7 @@
         margin: 2em 0 .8em 0;
         
         span{
-            @include sans-serif($fs: 5.5rem, $color: $clr-gray-dark, $lh: 1.2);
+            @include sans-serif($fs: 5.5rem, $color: $clr-white, $lh: 1.2);
         }
     }
 
