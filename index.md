@@ -2,15 +2,16 @@
 layout:         home
 
 # Content in de header 
-span:            Hi,
-title:           Welkom op mijn portfolio
-description:     Hieronder vind je meer informatie over mij en mijn laatst toffe projecten die ik heb gedaan.
+span:            Hi, 
+title:           Ik ben Dennis Bensch
+description:     Ik doe mijn best op zo goed mogelijke UX oplossingen te vinden voor complexe vraagstukken.
 
 # Content in de about me 
-about__img:      assets/images/port-dennis.png
+about__img:      assets/images/port-dennis.jpg
 about__title:    Zullen we <br> even kennis maken?
-about__subtitle: Digital Designer
-about__text:     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis erat condimentum, ultrices                      purus et, sodales sem. Suspendisse venenatis nisl erat, at euismod enim efficitur non. Sed et quam                     vel tellus convallis tincidunt. Donec lorem ligula, aliquam ac tincidunt a, condimentum vel lorem.                     Integer fermentum viverra lobortis.
+about__subtitle: Designer / Frontend Developer 
+about__text:     Mijn ontwerpoplossingen wil ik perfect laten aansluiten bij de eindgebruiker. Vooraf wil ik 
+                 goed de behoeftes inzichtelijk brengen. Zodat er een innovatieve oplossing bedacht kan worden door verschillende methodes toe te passen. Zodat er geen voor de hand liggende oplossingen gebruikt worden. Naast het ontwerpen van de innovatie oplossingen werk ik deze ook graag uit tot een werkend digitaal product.
 
 ---
 

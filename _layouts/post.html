@@ -4,8 +4,13 @@ layout: default
 
 ---
 
+<section class="section section--header">
+                     
+    <!-- Intro -->
+    <h1 class="header__title">{{ page.title }}</h1>
+    <p class="header__text">{{ page.description }}</p>
 
-{{ content }}
+</section>
 
 <ul class="myposts">
 {% for post in site.posts %}

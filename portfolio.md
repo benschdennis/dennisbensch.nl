@@ -1,7 +1,8 @@
 ---
+
 layout: portfolio
 
 title: Portfolio
-description: Hier komt een uitleg te staan van de cases
+description: Hieronder vind je een overzicht van toffe projecten waar ik aan gewerkt heb.
 
 ---

@@ -1,56 +1,34 @@
-<!DOCTYPE html>
-<![if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]>
-<![if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]>
-<![if IE 8]>         <html class="no-js lt-ie9"> <![endif]>
-<![if gt IE 8]><!>   <html class="no-js"> <!<![endif]>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Portfolio Dennis Bensch</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <link rel="stylesheet" href="{{ "assets/css/main.css" | prepend: site.baseurl }}">
-</head>
+---
 
-<body>
-   
-    <!-- Navigatie -->
-    <header>
-        <h5 class="logo" style="color: white;">Logo</h5>
-        
-        {% include navigatie.html %}
-        
-    </header>
+layout: default
 
-    <section class="section section--header">
+---
+<section class="section section--header">
                      
-        <!-- Intro -->
-        <h1 class="header__title">{{ page.title }}</h1>
-        <p class="header__text">{{ page.description }}</p>
+    <!-- Intro -->
+    <h1 class="header__title">{{ page.title }}</h1>
+    <p class="header__text">{{ page.description }}</p>
 
-    </section>
+</section>
 
-    <section class="section section__portfolio">
-        
-        <div class="grid-cases">
-        {% for portfolio in site.portfolio %}
+<section class="section section__portfolio">
     
-            <!-- Portfolio item 1  -->
-            <figure class="case__item">
-                <img class ="case__image" src="assets/images/portfolio-1.jpg">
-                <figcaption>
-                    <h3 class="case__title">{{ portfolio.title }}</h3>
-                    <p class="case__description">{{ portfolio.description }}</p>
-                    <a href="{{ portfolio.url }}" class="case__link">Lees meer</a>
-                </figcaption>
-            </figure>
-    
-        {% endfor %}
-    </div>
-    
-    </section>
-    
-</body>
+    <div class="grid-cases">
+    {% for portfolio in site.portfolio %}
 
-</html>
+        <!-- Portfolio items  -->
+        <figure class="case__item">
+            <img class ="case__image" src="assets/images/portfolio-2.jpg">
+            <figcaption>
+                <h3 class="case__title">{{ portfolio.title }}</h3>
+                <p class="case__description">{{ portfolio.description }}</p>
+                <a href="{{ portfolio.url }}" class="case__link">Lees meer</a>
+            </figcaption>
+        </figure>
+
+    {% endfor %}
+    
+</div>
+
+</section>
+    
