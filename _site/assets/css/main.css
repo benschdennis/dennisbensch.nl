@@ -413,6 +413,9 @@ h3 {
     content: '';
     display: block;
     clear: both; }
+  .section--description h1, .section--description h2, .section--description h3, .section--description h4, .section--description h5, .section--description h6 {
+    margin: 0;
+    padding: 0; }
 
 .section--column12 {
   width: 90%;
@@ -745,9 +748,9 @@ nav {
   .section--portfolio-item .portfolio__title {
     grid-column: 1 / 7 span; }
   .section--portfolio-item .portfolio__intro--white {
-    background: white;
+    background: rgba(255, 255, 255, 0.6);
     position: absolute;
-    bottom: 40%;
+    bottom: 20%;
     padding: 1em; }
   .section--portfolio-item h1.portfolio__title {
     font-family: "Six Caps", sans-serif;
@@ -759,6 +762,26 @@ nav {
     display: block;
     text-align: left;
     margin-bottom: 0.2em; }
+    .section--portfolio-item h1.portfolio__title::after {
+      content: '';
+      display: block;
+      height: 2px;
+      background: #fff;
+      width: 100%;
+      position: absolute; }
   .section--portfolio-item .portfolio__text {
     grid-column: 1 / 7;
     color: #868e96; }
+  .section--portfolio-item .header__information {
+    position: absolute;
+    z-index: 999;
+    bottom: 0;
+    background: #fff;
+    width: 100%;
+    grid-column: 3 / 12 span;
+    border-top: 5px solid #A95050; }
+    .section--portfolio-item .header__information ul {
+      padding-left: 1.7em; }
+    .section--portfolio-item .header__information li {
+      display: inline-block;
+      margin-right: 2em; }

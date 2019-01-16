@@ -4,9 +4,17 @@ layout: default
 
 ---
 
-<section class="section section--portfolio-item" style="background-image: url(/assets/images/hackedcity/header-hackedcity.jpg);">
-    
-                     
+
+<section class="section section--portfolio-item" style="background-image: url('{{ page.header }}');">
+                  
+    <div class="header__information">
+        <ul>
+            <li><strong>Opdrachtgever:</strong> {{ page.opdrachtgever }}</li>
+            <li><strong>Jaar:</strong> {{ page.jaar }}</li>
+
+        </ul>
+    </div>
+
     <!-- Intro -->
     <div class="portfolio__intro--white">
         <h1 class="portfolio__title">{{ page.title }}</h1>
@@ -21,4 +29,3 @@ layout: default
     {{ content }}
 
 </section>
-    

@@ -1,16 +1,35 @@
 --- 
 
 title: Sharing is caring
-description: Informatie die ik gebruik om verder te leren 
-opdrachtgever: Eigen
+description: Inspireerende bronnen waar ik van leer 
+opdrachtgever: Eigen ontwikkeling
+jaar: n.v.t
+header: /assets/images/header-content.jpg
 
-layout: default
+layout: content
+
 
 ---
 
-# Dit is een header
+### Relevante bronnen die ik gebruik om te leren
 
-Dit is een test gesprek
+#### Boeken
+
+| Titel | schrijver |
+|:--|:--|
+| De digitale butler: Kansen en bedreigingen van kunstmatige intelligentie | Jarno Duursma |
+| Designing for the Digital Age | Kim Goodwin |
+| De lerende mens | Jurjen van der Helden |
+| The Inmates Are Running the Asylum | Alan Cooper |
+| The Grit-Factor | Angela Duckworth |
+| Think and Grow Rich | Napoleon Hill | 
+
+#### Online bronnen 
+
+| Titel | Bron |
+|:--|:--|
+| [Design better](https://www.designbetter.co/podcast) | podcast |
+
 
 
 
