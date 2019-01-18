@@ -10,9 +10,18 @@ layout: content
 
 ---
 
-# Hacked city
+# Hacked City
 
-### Doelstelling
-Er is een structureel tekort aan programmeurs in Nederland. Programmeren heeft geen sexy imago en wordt als complex ervaren, waardoor het geen aantrekkingskracht heeft voor mensen tijdens hun carrièrekeuze. Zowel Nederlandse basisscholen als middelbare scholen weten vaak niet hoe zij hier op in kunnen spelen, of zien de meerwaarde er niet van in. Dit terwijl programmeren hedendaags toch erg belangrijk is in onze gedigitaliseerde leefomgeving. Wat als wij kinderen op jonge leeftijd enthousiast kunnen maken voor het vak van programmeren, zodat zij later iets in een soortgelijke richtingen zullen gaan doen?
+---
+
+#### Het probleem 
+Er is al sinds de komst van de eerste computer een structureel tekort aan programmeurs. Programmeren wordt vaak als iets zeer complex ervaren en heeft geen sexy imago waardoor het veel mensen afschrikt. Dit terwijl het een zeer interessante carrièrekeuze is. Voor goede programmeurs is immers altijd werk en is een goede baan snel gevonden. Nederland is een kenniseconomie en wordt op dit vlak flink voorbij gestreefd door bedrijven uit onder andere het oostblok zoals Rusland en Oekraïne, die met het bieden van out-sourcing veel business uit Nederland weghalen. 
+
+Zowel Nederlandse basisscholen als middelbare scholen weten vaak niet hoe ze hier goed op
+moeten inspelen of zien de noodzaak hier niet van. Er zijn al diverse (buitenschoolse) initiatieven
+die hier op inspelen zoals onder andere Hour of Code en CoderDojo waar mensen met elkaar aan
+de slag gaan met code. 
+
+Als kinderen op jonge leeftijd enthousiast worden gemaakt voor het vak van programmeur is de kans groter dat ze later iets in een dergelijke richting zullen gaan doen.
 
 ![interface met uitleg](/assets/images/hackedcity/interface.jpg)

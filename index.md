@@ -4,7 +4,7 @@ layout:         home
 # Content in de header 
 span:            Hi, 
 title:           Ik ben Dennis Bensch
-description:     Ik doe mijn best op zo goed mogelijke UX oplossingen te vinden voor complexe vraagstukken. Deze website is momenteel nog in ontwikkeling.
+description:     Ik doe mijn best op zo goed mogelijke UX oplossingen te vinden voor complexe vraagstukken. Deze website is momenteel nog in ontwikkeling. 
 
 # Content in de about me 
 about__img:      assets/images/port-dennis.jpg

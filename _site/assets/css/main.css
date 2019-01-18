@@ -774,7 +774,6 @@ nav {
     color: #868e96; }
   .section--portfolio-item .header__information {
     position: absolute;
-    z-index: 999;
     bottom: 0;
     background: #fff;
     width: 100%;
