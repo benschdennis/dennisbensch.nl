@@ -16,13 +16,13 @@
 .case__item{
     position: relative;
     overflow: hidden;
-    flex: 2 2 20rem;
+    flex: 2 2 2rem;
     display: flex;
 
     .case__image{
         display: block;
         width: 100%;
-        max-height: 20em;
+        height: 20em;
         object-fit: cover;
     }
     
@@ -32,13 +32,13 @@
         bottom: 0;
         left: 0;
         right: 0;
-        padding: 1em;
+        padding: .5em;
         background: rgba($clr-accent, .75);
         color: $clr-white;
         text-align: left;
-        display: flex;
         flex-direction: column;
         transition: top ease-in-out 400ms;
+        height: 100%;
     }
 
     &:hover figcaption,
@@ -47,6 +47,7 @@
     }
 }
 
+// Teksten in de thumbnail van de portfolio items
 .case__title{
     color: $clr-white;
     font-size: 1.8rem;
@@ -64,7 +65,8 @@
     font-size: 1.1em;
     text-decoration: none;
     border-bottom: 2px solid $clr-white;
-    align-self: flex-start;
+    bottom: 2em;
+    position: absolute;
 
     &::after{
         content: url(../images/arrow.svg);
@@ -79,7 +81,7 @@
     .grid-cases{
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        grid-gap: 1em;
+        grid-gap: 2em;
     }
 
     // .case__item.featured{
@@ -89,7 +91,7 @@
     // }
 
     .case__item{
-        grid-column: span 6;
+        grid-column: span 4;
 
     }
 
@@ -160,17 +162,15 @@
         text-align: left;
         margin-bottom: 0.2em;
 
-        &::after{
-            content: '';
-            display: block;
-            height: 2px;
-            background: $clr-white;
-            // opacity: 0.3;
-
-            width: 100%;
-            position: absolute;
-            // top: 10em; 
-        }
+        // Stroke onder de titel
+        // &::after{
+        //     content: '';
+        //     display: block;
+        //     height: 2px;
+        //     background: $clr-white;
+        //     width: 100%;
+        //     position: absolute;
+        // }
     }
 
     .portfolio__text{

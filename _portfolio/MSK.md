@@ -4,7 +4,8 @@ title: Museum schone kunsten Gent (MSK)
 description: Museum aantrekkelijk maken voor jongeren
 opdrachtgever: MSK
 jaar: 2017
-header: /assets/images/msk/header-msk.jpg
+header: msk/header-msk.jpg
+thumb: msk.jpg
 
 layout: content
 

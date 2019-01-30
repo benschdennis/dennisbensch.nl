@@ -39,6 +39,7 @@ h2{
 
 h3{
     @include sans-serif($fs: 1.8rem, $color: $clr-secondary, $tt: initial);
+    font-weight: $fw-normal;
 }
 
 // .section{
@@ -74,7 +75,6 @@ h3{
     h1, h2, h3, h4, h5, h6{
         margin: 0;
         padding: 0;
-        // font-size: 80%; // Verkleinen het huidige font size
     }
 }
 
@@ -82,9 +82,28 @@ h3{
 .section--column12{
     @include container;
     @include clearfix;
-
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    // grid: auto-flow / minmax(1em, 1fr) minmax(400px, 900px) minmax(1em, 1fr);
     grid-gap: 1em;
+}
+
+
+// Footer van de website 
+footer{
+    background: rgba($clr-primary, .85);
+    text-align: left;
+
+    color: $clr-white;
+    
+    width: 100%;
+    
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 1em;
+    grid-row: auto;
+
+    ul{
+        list-style: none;
+        grid-column: 2 / 12 span;
+    }
 }

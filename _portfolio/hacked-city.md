@@ -4,7 +4,9 @@ title: Hacked City
 description: Programmeren heeft een grote rol in de maatschappij
 opdrachtgever: YipYip
 jaar: 2017
-header: /assets/images/hackedcity/header-hackedcity.jpg
+header: hackedcity/header-hackedcity.jpg
+thumb: hacked.jpg
+
 
 layout: content
 

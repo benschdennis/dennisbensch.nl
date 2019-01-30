@@ -1,3 +1,4 @@
+// Start container navigatie 
 header{
   background: rgba($clr-primary, .85);
   text-align: center;
@@ -54,10 +55,12 @@ nav {
     }
 }
 
+// Hamburger menu vanaf scherm breedte van 800px
+
 @media only screen and (max-width: 800px) {
+  
   nav{
     display: none;
-
     grid: none;
     grid-column: none;
     grid-row: none;
@@ -65,7 +68,6 @@ nav {
 
   .nav-toggle:checked ~ nav{
     display: block;
-    
     background: rgba($clr-primary, .85);
     position: absolute;
     text-align: left;
