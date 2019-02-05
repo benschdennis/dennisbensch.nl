@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <!-- Main header / navigatie -->
+    <!-- Navigatie -->
     <header>
         <section class="section__navigation">
             <h5 class="logo" style="color: white;">Dennis Bensch</h5>
@@ -19,23 +19,24 @@
         </section>
     </header> 
 
-    <!-- Subheader van de pagina  -->
+    <!-- Header van de pagina / Afbeelding -->
     <section class="section__header">           
-        <h1 class="header__title"><span>{{ page.span }}</span> {{ page.title }}</h1>
+        <h1 class="header__title">
+            <span>{{ page.span }}</span> <!-- Hi, -->
+            {{ page.title }} <!-- Ik ben Dennis Bensch -->
+        </h1>
         <p class="header__text">{{ page.description }}</p>
     </section>
 
     <!-- About me -->
-    <section class="section section__content">
-        <img class="about__img" src="{{ page.about__img }}" alt="A random picture">
-        <h1 class="about__title">{{ page.about__title }}</h1>
-        <h3 class="about__subtitle">{{ page.about__subtitle }} </h3>
-        <div class="about__text">
-            <p>{{ page.about__text }}</p>
-        </div>
+    <section class="section section__about">
+        <img class="about__img" src="{{ page.about__img }}" alt="Dennis Bensch"> <!-- Profiel foto -->
+        <h1 class="about__title">{{ page.about__title }}</h1> <!-- Title -->
+        <h3 class="about__subtitle">{{ page.about__subtitle }} </h3> <!-- Subtitle -->
+        <div class="about__text"><p>{{ page.about__text }}</p></div> <!-- Short review -->
     </section>
 
-    <!-- Portfolio items -->
+    <!-- Featured portfolio items -->
     <section class="section section__featured">
     
             <!-- Portfolio item 1  -->
@@ -55,10 +56,10 @@
                 </figcaption>
                 <img class ="portfolio__image" src="assets/images/thumb-hacked.jpg">
             </figure> 
-            
     </section>
 
+    <!-- Section Footer -->
     {% include footer.html %}
-    
+    <!-- Eind section Footer -->
 </body>
 </html>

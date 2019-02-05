@@ -610,7 +610,7 @@ nav {
   letter-spacing: 0.01em; }
 
 @supports (display: grid) {
-  .section__content {
+  .section__about {
     display: grid;
     grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
     grid-column-gap: .5em; }
