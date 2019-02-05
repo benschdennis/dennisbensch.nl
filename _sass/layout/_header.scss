@@ -1,19 +1,14 @@
-.section--header{
+.section__header,
+.section__header--second{
     background: {
         size: cover;
         repeat: no-repeat;
-        
         color: $clr-primary;
         image: linear-gradient($clr-primary, $clr-secondary), url('/assets/images/header.jpg'); 
         blend-mode: multiply;
     }
-   
-    
-    padding: 5vh 0;
-    
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: 1em;
+
+    height: 35em;
 
     .logo,
     .header__title{
@@ -22,7 +17,7 @@
 
     h1.header__title{
         @include sans-serif($fs: 3rem, $color: white, $tt: initial);
-        margin: 2em 0 .8em 0;
+        margin: 4em 0 .8em 0;
         
         span{
             @include sans-serif($fs: 5.5rem, $color: $clr-white, $lh: 1.2);
@@ -46,4 +41,21 @@
             top: -1.1em;
         }
     }
+}
+
+.section__header--second{
+    height: 20em;
+    
+    h1.header__title{
+        margin: 3em 0 0 0;
+    }
+}
+
+@supports (display: grid){
+    .section__header,
+    .section__header--second{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
 }

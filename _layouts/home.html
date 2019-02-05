@@ -10,38 +10,34 @@
 
 </head>
 <body>
-    <!-- Navigatie -->
-    <header>
-        <h5 class="logo" style="color: white;">Dennis Bensch</h5>
-        
-        {% include navigatie.html %}
 
+    <!-- Main header / navigatie -->
+    <header>
+        <section class="section__navigation">
+            <h5 class="logo" style="color: white;">Dennis Bensch</h5>
+            {% include navigatie.html %}
+        </section>
     </header> 
 
-    <section class="section section--header">
-        
-        <svg class="logo logo--white"></svg>              
-       
+    <!-- Subheader van de pagina  -->
+    <section class="section__header">           
         <h1 class="header__title"><span>{{ page.span }}</span> {{ page.title }}</h1>
         <p class="header__text">{{ page.description }}</p>
-
     </section>
 
-    <section class="section section--content">
-        
+    <!-- About me -->
+    <section class="section section__content">
         <img class="about__img" src="{{ page.about__img }}" alt="A random picture">
         <h1 class="about__title">{{ page.about__title }}</h1>
         <h3 class="about__subtitle">{{ page.about__subtitle }} </h3>
         <div class="about__text">
             <p>{{ page.about__text }}</p>
         </div>
-    
     </section>
 
-    <section class="section section--column12">
+    <!-- Portfolio items -->
+    <section class="section section__featured">
     
-        <!-- <div class="portfolio__items"> -->
-            
             <!-- Portfolio item 1  -->
             <figure class="portfolio__item portfolio__item--left">
                 <figcaption>
@@ -59,8 +55,6 @@
                 </figcaption>
                 <img class ="portfolio__image" src="assets/images/thumb-hacked.jpg">
             </figure> 
-            
-       <!-- </div> -->
             
     </section>
 

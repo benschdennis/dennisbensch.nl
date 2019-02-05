@@ -2,22 +2,13 @@
 // Zelfde grid overnemen in de rest van de pagina zodat het stramie gelijk loopt 
 // Toevoegen in de algemene section waardoor het overal gelijk loopt
 
-.section--cases{
-    padding: 5em 0;
-    background: $clr-gray-light;
-}
-
 .grid-cases{
-    display: flex;
-    flex-wrap: wrap;
-    @include container($max-width: 50em);
+    @include container($max-width: 100%);
 }
 
 .case__item{
     position: relative;
     overflow: hidden;
-    flex: 2 2 2rem;
-    display: flex;
 
     .case__image{
         display: block;
@@ -32,11 +23,10 @@
         bottom: 0;
         left: 0;
         right: 0;
-        padding: .5em;
+        padding: 1em;
         background: rgba($clr-accent, .75);
         color: $clr-white;
         text-align: left;
-        flex-direction: column;
         transition: top ease-in-out 400ms;
         height: 100%;
     }
@@ -65,7 +55,7 @@
     font-size: 1.1em;
     text-decoration: none;
     border-bottom: 2px solid $clr-white;
-    bottom: 2em;
+    bottom: 5em;
     position: absolute;
 
     &::after{
@@ -84,107 +74,31 @@
         grid-gap: 2em;
     }
 
-    // .case__item.featured{
-    //     grid-column: 1 / span 4;
-    //     grid-row: 1 / span 1;
-    //     margin-bottom: 1em;
-    // }
-
     .case__item{
-        grid-column: span 4;
-
+        grid-column: span 3;
     }
-
-    .featured{
-        .case__title{
-            font-size: 3rem;
-        }
-
-        .case__description{
-            display: block;
-        }
-    }
-
-    // @media only screen and (max-width: 800px) {
-    //     .grid-cases{
-    //     display: grid;
-    //     grid-template-columns: repeat(1, 1fr);
-    //     }
-
-    //     .case__item.featured{
-    //         grid-column: 1 / span 1;
-    //         grid-row: 1 / span 1;
-    //         margin-bottom: 0em;
-    //     }
-
-    //     .featured{
-    //         .case__description{
-    //             display: none;
-    //         }
-    //     }
-    // }
 }
 
 // -------------------------------------------------------------------
-// BESCHRIJVING VAN PORTFOLIO VERVOLG PAGINA 
+// BESCHRIJVING VAN PORTFOLIO VERVOLG PAGINA HEADER
 // -------------------------------------------------------------------
 
-.section--portfolio-item{
+.section__portfolio--item{
     width: 100%;
-    height: 90vh;
-    // padding: 5vh 0;
-    position: relative;
+    height: 40em;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    // grid: auto-flow / minmax(1em, 1fr) minmax(400px, 900px) minmax(1em, 1fr);
-    // grid-gap: 1em;
-    
+
     background: {
         size: cover;
         repeat: no-repeat;
         position: center center;
     }
 
-    .portfolio__title{
-        grid-column: 1 / 7 span;
-    }
-
-    .portfolio__intro--white{
-        background: rgba($color: white, $alpha: 0.6);
-        position: absolute;
-        bottom: 20%;
-        padding: 1em;
-    }
-
-    h1.portfolio__title{
-        @include sans-serif($fs: 5rem, $color: $clr-secondary, $tt: initial);
-        display: block;
-        text-align: left;
-        margin-bottom: 0.2em;
-
-        // Stroke onder de titel
-        // &::after{
-        //     content: '';
-        //     display: block;
-        //     height: 2px;
-        //     background: $clr-white;
-        //     width: 100%;
-        //     position: absolute;
-        // }
-    }
-
-    .portfolio__text{
-        grid-column: 1 / 7;
-        color: $clr-secondary;
-    }
-
     .header__information{
-        position: absolute;
-        bottom: 0;
         background: $clr-white;
-        width: 100%;
-        grid-column: 3 / 12 span;
         border-top: 5px solid $clr-primary;
+        padding: 2em;
 
         ul{
             padding-left: 1.7em;
@@ -195,5 +109,26 @@
             margin-right: 2em;
         }
     }
-    
+}
+
+.section--description{
+    h3{
+        margin:.5em 0;
+    }
+}
+@supports (display: grid){
+    .section__portfolio--item{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+    }
+
+    .header__information{
+        grid-column: 3 / 12 span;
+        grid-row: 7;
+    }
+
+    h2, h3, h4, h5, h6{
+        grid-column: 4 / 13;
+    }
 }

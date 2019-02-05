@@ -18,11 +18,11 @@
 }
 
 @supports (display: grid){
-    // .section--content{
-    //     display: grid;
-    //     grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
-    //     grid-column-gap: .5em;
-    // }
+    .section__content{
+        display: grid;
+        grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
+        grid-column-gap: .5em;
+    }
     
     .about__img{
         grid-column: port / img;
@@ -31,6 +31,10 @@
         @include mq{
             grid-row: 1 / 4;
         }
+    }
+    
+    .section__featured{
+        display: grid;
     }
 
     .about__title{
@@ -60,21 +64,6 @@
 /* --------------------------------------------------------
     Portfolio op de homepagina 
 ---------------------------------------------------------- */
-.section__portfolio{
-    padding: 5em 0;
-    background: $clr-gray-light;
-}
-
-// .portfolio__items{
-//     display: grid;
-//     grid-template-columns: minmax(1em, 1fr)
-//         [container-start] 
-//         repeat(6, minmax(50px, 250px))
-//         [container-end] minmax(1em, 1fr);
-//     width: 60%;
-//     margin: 0 auto;
-// }
-
 .portfolio__item{
     display: block;
     position: relative;
@@ -148,104 +137,3 @@
         }
     }
 }
-
-
-
-// portfolio__item
-// portfolio__title
-// portfolio__link
-// portfolio__img
-
-
-
-
-
-
-// .grid-portfolio{
-//     display: flex;
-//     flex-wrap: wrap;
-//     @include container($max-width: 50em);
-// }
-
-// .grid-portfolio__item{
-//     position: relative;
-//     overflow: hidden;
-//     flex: 1 1 20rem;
-//     // display: flex;
-
-//     .grid-portfolio__image{
-//         display: block;
-//         width: 100%;
-//     }
-    
-//     figcaption{
-//         position: absolute;
-//         top: 100%;
-//         bottom: 0;
-//         left: 0;
-//         right: 0;
-//         padding: 1em;
-//         background: rgba($clr-accent, .75);
-//         color: $clr-white;
-//         text-align: left;
-//         display: flex;
-//         flex-direction: column;
-//         transition: top ease-in-out 400ms;
-//     }
-
-//     &:hover figcaption,
-//     &:focus figcaption{
-//         top: 0;
-//     }
-// }
-
-// .grid-portfolio__title{
-//     color: $clr-white;
-//     font-size: 1.8rem;
-//     text-transform: uppercase;
-//     margin-bottom: auto;
-// }
-
-// .grid-portfolio__description{
-//     display: none;
-// }
-
-
-// .grid-portfolio__link{
-//     color: $clr-white;
-//     font-weight: $fw-bold;
-//     font-size: 1.1em;
-//     text-decoration: none;
-//     border-bottom: 2px solid $clr-white;
-//     align-self: flex-start;
-
-//     &::after{
-//         content: url(../assets/images/arrow.svg);
-//         display: inline-block;
-//         margin-left: 0.6em;
-//         height: .9em;
-//         width: .9em;
-//     }
-// }
-
-// @supports (display: grid){
-//     .grid-portfolio{
-//         display: grid;
-//         grid-template-columns: repeat(2, 1fr);
-//     }
-
-//     .grid-portfolio__item.featured{
-//         grid-column: 1 / span 2;
-//         // grid-row: 1 / span 2;
-//     }
-
-//     .featured{
-//         .grid-portfolio__title{
-//             font-size: 3rem;
-//         }
-
-//         .grid-portfolio__description{
-//             display: block;
-//         }
-//     }
-// }

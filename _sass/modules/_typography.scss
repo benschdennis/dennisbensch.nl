@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,700'); // Montserrat 
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700'); // Roboto
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab'); // Roboto Slab
 
 $ff-title: 'Montserrat', sans-serif;
 $ff-subtitle: 'Montserrat', sans-serif; 
+$ff-qoute: 'Roboto Slab', sans-serif;
 
 $ff-body: 'roboto', sans-serif;
 
@@ -12,7 +14,7 @@ $fw-bold: 700;
 
 $fs-italic: italic;
 
-@mixin sans-serif($fs, $color: $clr-primary, $tt: uppercase, $lh:1, $ls: .1em){
+@mixin sans-serif($fs, $color: $clr-primary, $tt: uppercase, $lh:1, $ls: .01em){
     font-family: $ff-title;
     font-size: $fs;
     color: $color;

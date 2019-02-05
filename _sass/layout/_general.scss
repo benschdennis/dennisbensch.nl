@@ -1,25 +1,29 @@
+*{ margin: 0; padding: 0;}
+html, body{ height: 100%; }
+
+// Styling die overal in terugkomen 
 body{
     font-family: $ff-body;
     font-size: .875rem;
-    // font-size: 1.325rem;
-    line-height: 1.5em;
-    color: $clr-dark;
+    line-height: 1.8em;
+    color: $clr-gray;
     font-weight: $fw-normal;
 }
 
-h1, h2, h3, p {
-    margin-bottom: 1em;
-    margin-top: 0;
-}
 
 img {
     max-width: 100%;
     height: auto;
 }
 
+// Text styling 
+h1, h2, h3, p {
+    margin-bottom: 1em;
+    margin-top: 0;
+}
+
 h1{
     @include sans-serif($fs: 3.125rem);
-
     @include mq {
         font-size: 4.25rem;
       }
@@ -42,65 +46,85 @@ h3{
     font-weight: $fw-normal;
 }
 
-// .section{
-    // grid-template-columns: repeat(12, [col-start] 1fr) !important; 
-    // margin-top: 2.5em;
-    // margin-bottom: 2.5em;
-// }
+header{
+    background: rgba($clr-primary, .9);
+    text-align: center;
 
-// Default pages 
-.section--content{
-    @include container;
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    height: 4em;
+}
+
+
+
+
+
+// Sections 
+.section__navigation{
+    @include container($max-width: 85%);
+  }
+.section{
+    @include container($width: 100%);
     @include clearfix;
-    
-    display: grid;
-    grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
-    //     grid-column-gap: .5em;
 
-    margin-top: 8em;
-    margin-bottom: 10em;
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+.section--cases{
+    padding: 5em 0;
+    background: $clr-gray-light;
 }
 
 .section--description{
-    @include container($width: 60%);
-    @include clearfix;
-    
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 1em;
-
-    margin-top: 8em;
-    margin-bottom: 10em;
+    @include container($width: 70em);
 
     h1, h2, h3, h4, h5, h6{
-        margin: 0;
+        margin: 0 0 1em 0;
         padding: 0;
+    }
+    
+    blockquote{
+        font-size: 1.5em;
+        font-weight: $fw-bold;
+        line-height: 1em;
+        font-family: $ff-qoute;
     }
 }
 
-// Secion grid 12 column 
-.section--column12{
-    @include container;
-    @include clearfix;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: 1em;
-}
+@supports (display: grid){
 
+    header{
+        grid-column: 2 / 11;
+    }
+
+    .section--description{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    h1, h2, h3, h4, h5, h6{
+        grid-column: span 13;
+    }
+
+    p{
+        grid-column: 4 /  13;
+    }
+
+    blockquote{
+        grid-column: 1 / 3;
+    }
+}
 
 // Footer van de website 
 footer{
     background: rgba($clr-primary, .85);
     text-align: left;
-
     color: $clr-white;
-    
     width: 100%;
-    
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: 1em;
-    grid-row: auto;
+
+    grid-area: footer;
 
     ul{
         list-style: none;

@@ -1,22 +1,4 @@
-// Start container navigatie 
-header{
-  background: rgba($clr-primary, .85);
-  text-align: center;
-  
-  z-index: 999;
-  position: fixed;
-  width: 100%;
-  
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  // grid: auto-flow / minmax(1em, 1fr) minmax(400px, 900px) minmax(1em, 1fr);
-  grid-gap: 1em;
-  grid-row: auto;
-}
-
 .logo{
-  grid-column: 2;
-  grid-row: 1;
   text-align: left;
 }
 
@@ -25,11 +7,7 @@ header{
 }
 
 nav {
-  
-  grid-column: 8 / 12;
-  grid-row: 1;
-  text-align: right;
-  align-self: center;
+    float: right;
     
     ul {
       margin: 0;
@@ -55,8 +33,7 @@ nav {
     }
 }
 
-// Hamburger menu vanaf scherm breedte van 800px
-
+// Mobile devices
 @media only screen and (max-width: 800px) {
   
   nav{
@@ -81,8 +58,7 @@ nav {
     }
   }
 
-  
-
+  // Hamburger menu
   .nav-toggle-label{
     position: absolute;
     top: 0;

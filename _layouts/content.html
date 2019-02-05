@@ -4,21 +4,19 @@ layout: default
 
 ---
 
+<!-- 
+    PORTFOLIO CONTENT
+    pagina's die uitgebreid in gaan op de portfolio items
+-->
 
-<section class="section section--portfolio-item" style="background-image: url('/assets/images/{{ page.header }}');">
+<section class="section__portfolio--item" style="background-image: url('/assets/images/{{ page.header }}');">
                   
     <div class="header__information">
         <ul>
             <li><strong>Opdrachtgever:</strong> {{ page.opdrachtgever }}</li>
             <li><strong>Jaar:</strong> {{ page.jaar }}</li>
-
+            <li><strong>Tags:</strong> {{ page.tag-1 }} {{ page.tag-2 }} {{ page.tag-3 }}</li>
         </ul>
-    </div>
-
-    <!-- Intro -->
-    <div class="portfolio__intro--white">
-        <h1 class="portfolio__title">{{ page.title }}</h1>
-        <p class="portfolio__text">{{ page.description }}</p>
     </div>
 
 </section>

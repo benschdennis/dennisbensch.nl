@@ -8,6 +8,7 @@
  */
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,700");
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab");
 html {
   line-height: 1.15;
   /* 1 */
@@ -339,20 +340,27 @@ template {
 [hidden] {
   display: none; }
 
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  height: 100%; }
+
 body {
   font-family: "roboto", sans-serif;
   font-size: .875rem;
-  line-height: 1.5em;
-  color: #343a40;
+  line-height: 1.8em;
+  color: #868e96;
   font-weight: 400; }
-
-h1, h2, h3, p {
-  margin-bottom: 1em;
-  margin-top: 0; }
 
 img {
   max-width: 100%;
   height: auto; }
+
+h1, h2, h3, p {
+  margin-bottom: 1em;
+  margin-top: 0; }
 
 h1 {
   font-family: "Montserrat", sans-serif;
@@ -360,7 +368,7 @@ h1 {
   color: #A95050;
   text-transform: uppercase;
   line-height: 1;
-  letter-spacing: 0.1em; }
+  letter-spacing: 0.01em; }
   @media (min-width: 50em) {
     h1 {
       font-size: 4.25rem; } }
@@ -373,7 +381,7 @@ h2 {
   color: #A95050;
   text-transform: uppercase;
   line-height: 1;
-  letter-spacing: 0.1em; }
+  letter-spacing: 0.01em; }
   @media (min-width: 50em) {
     h2 {
       font-size: 3rem; } }
@@ -384,88 +392,84 @@ h3 {
   color: #868e96;
   text-transform: initial;
   line-height: 1;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.01em;
   font-weight: 400; }
 
-.section--content {
+header {
+  background: rgba(169, 80, 80, 0.9);
+  text-align: center;
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+  height: 4em; }
+
+.section__navigation {
   width: 90%;
   margin: 0 auto;
+  max-width: 85%; }
+
+.section {
+  width: 100%;
+  margin: 0 auto;
   max-width: 70em;
-  display: grid;
-  grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
-  margin-top: 8em;
-  margin-bottom: 10em; }
-  .section--content::after {
+  padding-top: 5em;
+  padding-bottom: 5em; }
+  .section::after {
     content: '';
     display: block;
     clear: both; }
+
+.section--cases {
+  padding: 5em 0;
+  background: #ececec; }
 
 .section--description {
-  width: 60%;
+  width: 70em;
   margin: 0 auto;
-  max-width: 70em;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-gap: 1em;
-  margin-top: 8em;
-  margin-bottom: 10em; }
-  .section--description::after {
-    content: '';
-    display: block;
-    clear: both; }
+  max-width: 70em; }
   .section--description h1, .section--description h2, .section--description h3, .section--description h4, .section--description h5, .section--description h6 {
-    margin: 0;
+    margin: 0 0 1em 0;
     padding: 0; }
+  .section--description blockquote {
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 1em;
+    font-family: "Roboto Slab", sans-serif; }
 
-.section--column12 {
-  width: 90%;
-  margin: 0 auto;
-  max-width: 70em;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 1em; }
-  .section--column12::after {
-    content: '';
-    display: block;
-    clear: both; }
+@supports (display: grid) {
+  header {
+    grid-column: 2 / 11; }
 
+  .section--description {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); }
+
+  h1, h2, h3, h4, h5, h6 {
+    grid-column: span 13; }
+
+  p {
+    grid-column: 4 /  13; }
+
+  blockquote {
+    grid-column: 1 / 3; } }
 footer {
   background: rgba(169, 80, 80, 0.85);
   text-align: left;
   color: #fff;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 1em;
-  grid-row: auto; }
+  grid-area: footer; }
   footer ul {
     list-style: none;
     grid-column: 2 / 12 span; }
 
-header {
-  background: rgba(169, 80, 80, 0.85);
-  text-align: center;
-  z-index: 999;
-  position: fixed;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 1em;
-  grid-row: auto; }
-
 .logo {
-  grid-column: 2;
-  grid-row: 1;
   text-align: left; }
 
 .nav-toggle {
   display: none; }
 
 nav {
-  grid-column: 8 / 12;
-  grid-row: 1;
-  text-align: right;
-  align-self: center; }
+  float: right; }
   nav ul {
     margin: 0;
     padding: 0;
@@ -524,39 +528,43 @@ nav {
       bottom: 7px; }
     .nav-toggle-label span::after {
       top: 7px; } }
-.section--header {
+.section__header,
+.section__header--second {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #A95050;
   background-image: linear-gradient(#A95050, #868e96), url("/assets/images/header.jpg");
   background-blend-mode: multiply;
-  padding: 5vh 0;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 1em; }
-  .section--header .logo,
-  .section--header .header__title {
+  height: 35em; }
+  .section__header .logo,
+  .section__header .header__title,
+  .section__header--second .logo,
+  .section__header--second .header__title {
     grid-column: 2 / 7 span; }
-  .section--header h1.header__title {
+  .section__header h1.header__title,
+  .section__header--second h1.header__title {
     font-family: "Montserrat", sans-serif;
     font-size: 3rem;
     color: white;
     text-transform: initial;
     line-height: 1;
-    letter-spacing: 0.1em;
-    margin: 2em 0 .8em 0; }
-    .section--header h1.header__title span {
+    letter-spacing: 0.01em;
+    margin: 4em 0 .8em 0; }
+    .section__header h1.header__title span,
+    .section__header--second h1.header__title span {
       font-family: "Montserrat", sans-serif;
       font-size: 5.5rem;
       color: #fff;
       text-transform: uppercase;
       line-height: 1.2;
-      letter-spacing: 0.1em; }
-  .section--header .header__text {
+      letter-spacing: 0.01em; }
+  .section__header .header__text,
+  .section__header--second .header__text {
     grid-column: 2 / 7;
     position: relative;
     color: #fff; }
-    .section--header .header__text::after {
+    .section__header .header__text::after,
+    .section__header--second .header__text::after {
       content: '';
       display: block;
       height: 2px;
@@ -566,6 +574,16 @@ nav {
       position: absolute;
       top: -1.1em; }
 
+.section__header--second {
+  height: 20em; }
+  .section__header--second h1.header__title {
+    margin: 3em 0 0 0; }
+
+@supports (display: grid) {
+  .section__header,
+  .section__header--second {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); } }
 .about__img {
   max-height: 20em; }
   @media (min-width: 40em) {
@@ -580,7 +598,7 @@ nav {
   color: #A95050;
   text-transform: uppercase;
   line-height: 1;
-  letter-spacing: 0.1em; }
+  letter-spacing: 0.01em; }
 
 .about__subtitle {
   margin: .5em 0;
@@ -589,15 +607,23 @@ nav {
   color: #868e96;
   text-transform: uppercase;
   line-height: 1;
-  letter-spacing: 0.1em; }
+  letter-spacing: 0.01em; }
 
 @supports (display: grid) {
+  .section__content {
+    display: grid;
+    grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
+    grid-column-gap: .5em; }
+
   .about__img {
     grid-column: port / img;
     grid-row: 1 / 2; }
     @media (min-width: 50em) {
       .about__img {
         grid-row: 1 / 4; } }
+
+  .section__featured {
+    display: grid; }
 
   .about__title {
     grid-column: name-start / port-end;
@@ -620,10 +646,6 @@ nav {
 /* --------------------------------------------------------
     Portfolio op de homepagina 
 ---------------------------------------------------------- */
-.section__portfolio {
-  padding: 5em 0;
-  background: #ececec; }
-
 .portfolio__item {
   display: block;
   position: relative;
@@ -676,22 +698,14 @@ nav {
       position: absolute;
       right: 0; }
 
-.section--cases {
-  padding: 5em 0;
-  background: #ececec; }
-
 .grid-cases {
-  display: flex;
-  flex-wrap: wrap;
   width: 90%;
   margin: 0 auto;
-  max-width: 50em; }
+  max-width: 100%; }
 
 .case__item {
   position: relative;
-  overflow: hidden;
-  flex: 2 2 2rem;
-  display: flex; }
+  overflow: hidden; }
   .case__item .case__image {
     display: block;
     width: 100%;
@@ -703,11 +717,10 @@ nav {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: .5em;
+    padding: 1em;
     background: rgba(134, 142, 150, 0.75);
     color: #fff;
     text-align: left;
-    flex-direction: column;
     transition: top ease-in-out 400ms;
     height: 100%; }
   .case__item:hover figcaption, .case__item:focus figcaption {
@@ -728,7 +741,7 @@ nav {
   font-size: 1.1em;
   text-decoration: none;
   border-bottom: 2px solid #fff;
-  bottom: 2em;
+  bottom: 5em;
   position: absolute; }
   .case__link::after {
     content: url(../images/arrow.svg);
@@ -744,50 +757,37 @@ nav {
     grid-gap: 2em; }
 
   .case__item {
-    grid-column: span 4; }
-
-  .featured .case__title {
-    font-size: 3rem; }
-  .featured .case__description {
-    display: block; } }
-.section--portfolio-item {
+    grid-column: span 3; } }
+.section__portfolio--item {
   width: 100%;
-  height: 90vh;
-  position: relative;
+  height: 40em;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center; }
-  .section--portfolio-item .portfolio__title {
-    grid-column: 1 / 7 span; }
-  .section--portfolio-item .portfolio__intro--white {
-    background: rgba(255, 255, 255, 0.6);
-    position: absolute;
-    bottom: 20%;
-    padding: 1em; }
-  .section--portfolio-item h1.portfolio__title {
-    font-family: "Montserrat", sans-serif;
-    font-size: 5rem;
-    color: #868e96;
-    text-transform: initial;
-    line-height: 1;
-    letter-spacing: 0.1em;
-    display: block;
-    text-align: left;
-    margin-bottom: 0.2em; }
-  .section--portfolio-item .portfolio__text {
-    grid-column: 1 / 7;
-    color: #868e96; }
-  .section--portfolio-item .header__information {
-    position: absolute;
-    bottom: 0;
+  .section__portfolio--item .header__information {
     background: #fff;
-    width: 100%;
-    grid-column: 3 / 12 span;
-    border-top: 5px solid #A95050; }
-    .section--portfolio-item .header__information ul {
+    border-top: 5px solid #A95050;
+    padding: 2em; }
+    .section__portfolio--item .header__information ul {
       padding-left: 1.7em; }
-    .section--portfolio-item .header__information li {
+    .section__portfolio--item .header__information li {
       display: inline-block;
       margin-right: 2em; }
+
+.section--description h3 {
+  margin: .5em 0; }
+
+@supports (display: grid) {
+  .section__portfolio--item {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(7, 1fr); }
+
+  .header__information {
+    grid-column: 3 / 12 span;
+    grid-row: 7; }
+
+  h2, h3, h4, h5, h6 {
+    grid-column: 4 / 13; } }
